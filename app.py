@@ -21,26 +21,26 @@ import os
 from streamlit.web.server.websocket_headers import _get_websocket_headers
  
 headers = _get_websocket_headers()
-username=""
-if "X-Ms-Client-Principal-Name" in headers:
-    username = headers["X-Ms-Client-Principal-Name"]
+username="demouser"
+# if "X-Ms-Client-Principal-Name" in headers:
+#     username = headers["X-Ms-Client-Principal-Name"]
  
 # st.write(headers) # have a look at what else is in the dict
 
 # Load the image
-image = Image.open("static/img/Fluke.png")
+#image = Image.open("static/img/logo.png")
 
 # Get the original image width and height
-original_width, original_height = image.size
+#original_width, original_height = image.size
 
 # Calculate the new width to reduce the size to half
-new_width = int(original_width * 1.3)
+#new_width = int(original_width * 1.3)
 
 # Resize the image
-image = image.resize((new_width, original_height))
+#image = image.resize((new_width, original_height))
 
 # Display the resized image in the sidebar
-st.sidebar.image(image)
+#st.sidebar.image(image)
 
 #Instructions :
 
@@ -58,7 +58,7 @@ st.sidebar.write("2. Translated document will have a suffix with the target lang
 
 # Display the main title
 
-st.markdown("<h1 style='text-align: left; font-size: 36px;'>Klever Karol - Fluke's Document Translator</h1>", unsafe_allow_html=True)
+st.markdown("<h1 style='text-align: left; font-size: 36px;'>Document Translator</h1>", unsafe_allow_html=True)
 
 # Create a single file uploader widget with a unique key
 st.write("")
